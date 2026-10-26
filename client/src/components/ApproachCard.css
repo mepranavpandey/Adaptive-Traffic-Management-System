@@ -1,0 +1,383 @@
+.approach-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.approach-card.green {
+  border-color: rgba(74, 222, 128, 0.2);
+  box-shadow: 0 0 20px rgba(74, 222, 128, 0.05);
+}
+
+.approach-card.yellow {
+  border-color: rgba(250, 204, 21, 0.2);
+  box-shadow: 0 0 20px rgba(250, 204, 21, 0.05);
+}
+
+.approach-card.red {
+  border-color: rgba(239, 68, 68, 0.1);
+}
+
+.approach-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.approach-title {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.approach-direction {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #e5e5e5;
+}
+
+.approach-badges {
+  display: flex;
+  gap: 6px;
+}
+
+.phase-indicator {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #555;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.phase-indicator.active {
+  background: rgba(74, 222, 128, 0.15);
+  color: #4ade80;
+  border-color: rgba(74, 222, 128, 0.3);
+}
+
+.control-indicator {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 99px;
+  text-transform: uppercase;
+  border: 1px solid;
+}
+
+.control-ai {
+  background: rgba(59, 130, 246, 0.1);
+  color: #60a5fa;
+  border-color: rgba(59, 130, 246, 0.25);
+}
+
+.control-manual {
+  background: rgba(250, 204, 21, 0.1);
+  color: #fde68a;
+  border-color: rgba(250, 204, 21, 0.25);
+}
+
+.control-fault {
+  background: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+  border-color: rgba(239, 68, 68, 0.25);
+}
+
+.input-status {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-end;
+}
+
+.input-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  color: #555;
+}
+
+.input-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.approach-body {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+  min-height: 0;
+}
+
+.traffic-light-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.signal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.signal-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.signal-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 99px;
+  letter-spacing: 0.1em;
+}
+
+.signal-red { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+.signal-yellow { background: rgba(250, 204, 21, 0.2); color: #fde68a; }
+.signal-green { background: rgba(74, 222, 128, 0.2); color: #4ade80; }
+
+.signal-phase {
+  font-size: 10px;
+  color: #555;
+  text-align: center;
+}
+
+.phase-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer-value {
+  font-size: 20px;
+  font-weight: 700;
+  font-feature-settings: 'tnum';
+  color: #e5e5e5;
+  line-height: 1;
+}
+
+.timer-label {
+  font-size: 10px;
+  color: #555;
+}
+
+.traffic-metrics {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.metrics-row {
+  display: flex;
+  gap: 8px;
+}
+
+.metric-item {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 6px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.metric-label {
+  font-size: 10px;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metric-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e5e5e5;
+  font-feature-settings: 'tnum';
+}
+
+.congestion-bar {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 6px 8px;
+}
+
+.congestion-label-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.congestion-track {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.congestion-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.5s ease, background 0.3s;
+}
+
+.decision-reason {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  background: rgba(59, 130, 246, 0.06);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 11px;
+}
+
+.reason-icon {
+  color: #60a5fa;
+  flex-shrink: 0;
+  font-style: normal;
+}
+
+.reason-text {
+  color: #888;
+  line-height: 1.4;
+}
+
+.approach-controls {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 12px;
+}
+
+.manual-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.controls-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.signal-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.signal-btn {
+  flex: 1;
+  padding: 6px 0;
+  font-size: 11px;
+  font-weight: 700;
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+  letter-spacing: 0.05em;
+}
+
+.signal-btn:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.signal-btn:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.signal-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.green-btn {
+  background: rgba(74, 222, 128, 0.15);
+  color: #4ade80;
+  border-color: rgba(74, 222, 128, 0.4);
+}
+
+.yellow-btn {
+  background: rgba(250, 204, 21, 0.15);
+  color: #fde68a;
+  border-color: rgba(250, 204, 21, 0.4);
+}
+
+.red-btn {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.duration-control {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 10px;
+  color: #666;
+}
+
+.duration-slider {
+  width: 100%;
+  height: 4px;
+  accent-color: #60a5fa;
+  cursor: pointer;
+}
+
+.phase-request-btn {
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  background: rgba(139, 92, 246, 0.15);
+  color: #a78bfa;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.phase-request-btn:hover {
+  opacity: 0.85;
+}
+
+.ai-status-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ai-control-label {
+  font-size: 10px;
+  color: #60a5fa;
+}
+
+.data-source-label {
+  font-size: 10px;
+  color: #555;
+}

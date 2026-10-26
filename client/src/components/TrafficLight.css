@@ -1,0 +1,34 @@
+.traffic-light-housing {
+  background: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.lamp {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #1a1a1a;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.red-lamp.active {
+  background: #ef4444;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.8), inset 0 2px 4px rgba(255, 255, 255, 0.4);
+}
+
+.yellow-lamp.active {
+  background: #facc15;
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.8), inset 0 2px 4px rgba(255, 255, 255, 0.4);
+}
+
+.green-lamp.active {
+  background: #4ade80;
+  box-shadow: 0 0 12px rgba(74, 222, 128, 0.8), inset 0 2px 4px rgba(255, 255, 255, 0.4);
+}

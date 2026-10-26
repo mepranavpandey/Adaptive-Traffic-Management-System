@@ -1,0 +1,242 @@
+.header {
+  height: 64px;
+  background: rgba(20, 20, 20, 0.98);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.header-title {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #e5e5e5;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.connection-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.connection-badge.connected {
+  color: #4ade80;
+  border-color: rgba(74, 222, 128, 0.3);
+}
+
+.connection-badge.disconnected {
+  color: #f87171;
+  border-color: rgba(248, 113, 113, 0.3);
+}
+
+.connection-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.connection-badge.connected .connection-dot {
+  animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.header-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.mode-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.active-phase-label {
+  font-size: 12px;
+  color: #888;
+}
+
+.active-phase-label strong {
+  color: #e5e5e5;
+}
+
+.decision-explanation {
+  font-size: 11px;
+  color: #666;
+  text-align: center;
+  font-style: italic;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.mode-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mode-selector {
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.mode-btn {
+  padding: 5px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border: none;
+  background: transparent;
+  color: #666;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.mode-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e5e5e5;
+}
+
+.mode-btn.active {
+  color: #e5e5e5;
+}
+
+.mode-btn.active.ai-mode {
+  background: rgba(59, 130, 246, 0.3);
+  color: #60a5fa;
+}
+
+.mode-btn.active.manual-mode {
+  background: rgba(250, 204, 21, 0.2);
+  color: #fcd34d;
+}
+
+.mode-btn.active.fault-mode {
+  background: rgba(239, 68, 68, 0.3);
+  color: #f87171;
+}
+
+.ai-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.ai-btn {
+  padding: 5px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: opacity 0.15s;
+}
+
+.ai-btn:hover {
+  opacity: 0.85;
+}
+
+.start-btn {
+  background: rgba(74, 222, 128, 0.2);
+  color: #4ade80;
+  border: 1px solid rgba(74, 222, 128, 0.3);
+}
+
+.stop-btn {
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.status-indicators {
+  display: flex;
+  gap: 6px;
+}
+
+.status-badge {
+  padding: 3px 10px;
+  border-radius: 99px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border: 1px solid transparent;
+}
+
+.mode-badge-ai {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.mode-badge-manual {
+  background: rgba(250, 204, 21, 0.15);
+  color: #fde68a;
+  border-color: rgba(250, 204, 21, 0.3);
+}
+
+.mode-badge-fault {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.ai-active {
+  background: rgba(74, 222, 128, 0.15);
+  color: #4ade80;
+  border-color: rgba(74, 222, 128, 0.3);
+}
+
+.ai-inactive {
+  background: rgba(255, 255, 255, 0.05);
+  color: #666;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.simulation-badge {
+  background: rgba(139, 92, 246, 0.15);
+  color: #a78bfa;
+  border-color: rgba(139, 92, 246, 0.3);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 99px;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
